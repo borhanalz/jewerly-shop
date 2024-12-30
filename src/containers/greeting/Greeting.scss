@@ -43,19 +43,20 @@
 }
 
 .greeting-text {
-  font-size: 70px;
+  margin-top: 130px;
+  font-size: 60px;
   line-height: 1.1;
   color: $textColor !important;
 }
 
 .greeting-text-p {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 40px;
 }
 
 .greeting-image-div > img {
   max-width: 100%;
-  height: auto;
+  height: 200px !important;
 }
 
 .wave-emoji {

@@ -4,6 +4,9 @@ import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import img1 from '../../assets/images/products/5935973140893122447.jpg'
+
+
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
   const [mediumBlogs, setMediumBlogs] = useState([]);
@@ -44,6 +47,51 @@ export default function Blogs() {
       getProfileData();
     }
   }, []);
+
+  const ProductData = [
+    {
+      id:1,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'    },
+    {
+      id:2,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'    },
+    {
+      id:3,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'    },
+    {
+      id:4,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'    },
+    {
+      id:5,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'    },
+    {
+      id:6,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'    },
+    {
+      id:7,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'
+    },
+    {
+      id:8,
+      img:img1,
+      title:'گردنبد طلای طرح گوزن',
+      price:'7,200,000 تومان'    }
+  ]
+
   if (!blogSection.display) {
     return null;
   }
@@ -62,31 +110,15 @@ export default function Blogs() {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {blogSection.displayMediumBlogs !== "true" ||
-            mediumBlogs === "Error"
-              ? blogSection.blogs.map((blog, i) => {
+            {ProductData.map((blog, i) => {
                   return (
                     <BlogCard
-                      key={i}
+                      key={blog.id}
+                      img={blog.img}
+                      price={blog.price}
                       isDark={isDark}
                       blog={{
-                        url: blog.url,
-                        image: blog.image,
                         title: blog.title,
-                        description: blog.description
-                      }}
-                    />
-                  );
-                })
-              : mediumBlogs.map((blog, i) => {
-                  return (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: blog.link,
-                        title: blog.title,
-                        description: extractTextContent(blog.content)
                       }}
                     />
                   );

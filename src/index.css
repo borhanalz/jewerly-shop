@@ -13,18 +13,20 @@
   font-display: swap;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "kalameh";
 }
 html,
 body {
   scroll-behavior: smooth;
+  font-family: "kalameh";
+
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font-family: "kalameh";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
 }
 /* Media Query */
 @media (max-width: 1380px) {
